@@ -40,7 +40,7 @@ Library.UnloadCallback = function()
 end
 
 local MainFrame = Library:CreateWindow({
-	Name = "AirHub",
+	Name = "NeonAccountShop",
 	Themeable = {
 		Image = "7059346386",
 		Info = "Made by Exunys\nPowered by Pepsi's UI Library",
@@ -57,29 +57,29 @@ local AimbotTab = MainFrame:CreateTab({
 })
 
 local VisualsTab = MainFrame:CreateTab({
-	Name = "Visuals"
+	Name = "Visual"
 })
 
 local CrosshairTab = MainFrame:CreateTab({
-	Name = "Crosshair"
+	Name = "Cursor"
 })
 
 local FunctionsTab = MainFrame:CreateTab({
-	Name = "Functions"
+	Name = "Funciones"
 })
 
 --// Aimbot Sections
 
 local Values = AimbotTab:CreateSection({
-	Name = "Values"
+	Name = "Valores"
 })
 
 local Checks = AimbotTab:CreateSection({
-	Name = "Checks"
+	Name = "Comprobacion"
 })
 
 local ThirdPerson = AimbotTab:CreateSection({
-	Name = "Third Person"
+	Name = "Tercera persona"
 })
 
 local FOV_Values = AimbotTab:CreateSection({
@@ -88,64 +88,64 @@ local FOV_Values = AimbotTab:CreateSection({
 })
 
 local FOV_Appearance = AimbotTab:CreateSection({
-	Name = "FOV Circle Appearance",
+	Name = "Apariencia del círculo del campo de visión",
 	Side = "Right"
 })
 
 --// Visuals Sections
 
 local WallHackChecks = VisualsTab:CreateSection({
-	Name = "Checks"
+	Name = "Cheques"
 })
 
 local ESPSettings = VisualsTab:CreateSection({
-	Name = "ESP Settings"
+	Name = "Configuración ESP"
 })
 
 local BoxesSettings = VisualsTab:CreateSection({
-	Name = "Boxes Settings"
+	Name = "Configuración de cajas"
 })
 
 local ChamsSettings = VisualsTab:CreateSection({
-	Name = "Chams Settings"
+	Name = "Configuración de Chams"
 })
 
 local TracersSettings = VisualsTab:CreateSection({
-	Name = "Tracers Settings",
+	Name = "Configuración de tracers",
 	Side = "Right"
 })
 
 local HeadDotsSettings = VisualsTab:CreateSection({
-	Name = "Head Dots Settings",
+	Name = "Configuración de puntos de la cabeza",
 	Side = "Right"
 })
 
 local HealthBarSettings = VisualsTab:CreateSection({
-	Name = "Health Bar Settings",
+	Name = "Configuración de la barra de salud",
 	Side = "Right"
 })
 
 --// Crosshair Sections
 
 local CrosshairSettings = CrosshairTab:CreateSection({
-	Name = "Settings"
+	Name = "Ajustes"
 })
 
 local CrosshairSettings_CenterDot = CrosshairTab:CreateSection({
-	Name = "Center Dot Settings",
+	Name = "Configuración del punto central",
 	Side = "Right"
 })
 
 --// Functions Sections
 
 local FunctionsSection = FunctionsTab:CreateSection({
-	Name = "Functions"
+	Name = "Funciones"
 })
 
 --// Aimbot Values
 
 Values:AddToggle({
-	Name = "Enabled",
+	Name = "ON",
 	Value = Aimbot.Settings.Enabled,
 	Callback = function(New, Old)
 		Aimbot.Settings.Enabled = New
@@ -153,7 +153,7 @@ Values:AddToggle({
 }).Default = Aimbot.Settings.Enabled
 
 Values:AddToggle({
-	Name = "Toggle",
+	Name = "Palanca",
 	Value = Aimbot.Settings.Toggle,
 	Callback = function(New, Old)
 		Aimbot.Settings.Toggle = New
@@ -189,7 +189,7 @@ Values:AddKeybind({
 ]]
 
 Values:AddSlider({
-	Name = "Sensitivity",
+	Name = "sensibilidad",
 	Value = Aimbot.Settings.Sensitivity,
 	Callback = function(New, Old)
 		Aimbot.Settings.Sensitivity = New
@@ -202,7 +202,7 @@ Values:AddSlider({
 --// Aimbot Checks
 
 Checks:AddToggle({
-	Name = "Team Check",
+	Name = "Verificación del equipo",
 	Value = Aimbot.Settings.TeamCheck,
 	Callback = function(New, Old)
 		Aimbot.Settings.TeamCheck = New
@@ -210,7 +210,7 @@ Checks:AddToggle({
 }).Default = Aimbot.Settings.TeamCheck
 
 Checks:AddToggle({
-	Name = "Wall Check",
+	Name = "Comprobación de la pared",
 	Value = Aimbot.Settings.WallCheck,
 	Callback = function(New, Old)
 		Aimbot.Settings.WallCheck = New
@@ -218,7 +218,7 @@ Checks:AddToggle({
 }).Default = Aimbot.Settings.WallCheck
 
 Checks:AddToggle({
-	Name = "Alive Check",
+	Name = "Comprobación en vivo",
 	Value = Aimbot.Settings.AliveCheck,
 	Callback = function(New, Old)
 		Aimbot.Settings.AliveCheck = New
@@ -228,7 +228,7 @@ Checks:AddToggle({
 --// Aimbot ThirdPerson
 
 ThirdPerson:AddToggle({
-	Name = "Enable Third Person",
+	Name = "Habilitar tercera persona",
 	Value = Aimbot.Settings.ThirdPerson,
 	Callback = function(New, Old)
 		Aimbot.Settings.ThirdPerson = New
@@ -236,7 +236,7 @@ ThirdPerson:AddToggle({
 }).Default = Aimbot.Settings.ThirdPerson
 
 ThirdPerson:AddSlider({
-	Name = "Sensitivity",
+	Name = "Sensibilidad",
 	Value = Aimbot.Settings.ThirdPersonSensitivity,
 	Callback = function(New, Old)
 		Aimbot.Settings.ThirdPersonSensitivity = New
@@ -249,7 +249,7 @@ ThirdPerson:AddSlider({
 --// FOV Settings Values
 
 FOV_Values:AddToggle({
-	Name = "Enabled",
+	Name = "Activada",
 	Value = Aimbot.FOVSettings.Enabled,
 	Callback = function(New, Old)
 		Aimbot.FOVSettings.Enabled = New
@@ -265,7 +265,7 @@ FOV_Values:AddToggle({
 }).Default = Aimbot.FOVSettings.Visible
 
 FOV_Values:AddSlider({
-	Name = "Amount",
+	Name = "Cantidad",
 	Value = Aimbot.FOVSettings.Amount,
 	Callback = function(New, Old)
 		Aimbot.FOVSettings.Amount = New
@@ -277,7 +277,7 @@ FOV_Values:AddSlider({
 --// FOV Settings Appearance
 
 FOV_Appearance:AddToggle({
-	Name = "Filled",
+	Name = "Completada",
 	Value = Aimbot.FOVSettings.Filled,
 	Callback = function(New, Old)
 		Aimbot.FOVSettings.Filled = New
@@ -285,7 +285,7 @@ FOV_Appearance:AddToggle({
 }).Default = Aimbot.FOVSettings.Filled
 
 FOV_Appearance:AddSlider({
-	Name = "Transparency",
+	Name = "Transparencia",
 	Value = Aimbot.FOVSettings.Transparency,
 	Callback = function(New, Old)
 		Aimbot.FOVSettings.Transparency = New
@@ -296,7 +296,7 @@ FOV_Appearance:AddSlider({
 }).Default = Aimbot.FOVSettings.Transparency
 
 FOV_Appearance:AddSlider({
-	Name = "Sides",
+	Name = "Lados",
 	Value = Aimbot.FOVSettings.Sides,
 	Callback = function(New, Old)
 		Aimbot.FOVSettings.Sides = New
@@ -306,7 +306,7 @@ FOV_Appearance:AddSlider({
 }).Default = Aimbot.FOVSettings.Sides
 
 FOV_Appearance:AddSlider({
-	Name = "Thickness",
+	Name = "Espesor",
 	Value = Aimbot.FOVSettings.Thickness,
 	Callback = function(New, Old)
 		Aimbot.FOVSettings.Thickness = New
@@ -324,7 +324,7 @@ FOV_Appearance:AddColorpicker({
 }).Default = Aimbot.FOVSettings.Color
 
 FOV_Appearance:AddColorpicker({
-	Name = "Locked Color",
+	Name = "Color bloqueado",
 	Value = Aimbot.FOVSettings.LockedColor,
 	Callback = function(New, Old)
 		Aimbot.FOVSettings.LockedColor = New
@@ -342,7 +342,7 @@ WallHackChecks:AddToggle({
 }).Default = WallHack.Settings.Enabled
 
 WallHackChecks:AddToggle({
-	Name = "Team Check",
+	Name = "Verificación del equipo",
 	Value = WallHack.Settings.TeamCheck,
 	Callback = function(New, Old)
 		WallHack.Settings.TeamCheck = New
@@ -350,7 +350,7 @@ WallHackChecks:AddToggle({
 }).Default = WallHack.Settings.TeamCheck
 
 WallHackChecks:AddToggle({
-	Name = "Alive Check",
+	Name = "Verificación de estado",
 	Value = WallHack.Settings.AliveCheck,
 	Callback = function(New, Old)
 		WallHack.Settings.AliveCheck = New
@@ -360,7 +360,7 @@ WallHackChecks:AddToggle({
 --// Visuals Settings
 
 ESPSettings:AddToggle({
-	Name = "Enabled",
+	Name = "Activada",
 	Value = WallHack.Visuals.ESPSettings.Enabled,
 	Callback = function(New, Old)
 		WallHack.Visuals.ESPSettings.Enabled = New
@@ -376,7 +376,7 @@ ESPSettings:AddToggle({
 }).Default = WallHack.Visuals.ESPSettings.Outline
 
 ESPSettings:AddToggle({
-	Name = "Display Distance",
+	Name = "Distancia de visualización",
 	Value = WallHack.Visuals.ESPSettings.DisplayDistance,
 	Callback = function(New, Old)
 		WallHack.Visuals.ESPSettings.DisplayDistance = New
@@ -384,7 +384,7 @@ ESPSettings:AddToggle({
 }).Default = WallHack.Visuals.ESPSettings.DisplayDistance
 
 ESPSettings:AddToggle({
-	Name = "Display Health",
+	Name = "Mostrar salud",
 	Value = WallHack.Visuals.ESPSettings.DisplayHealth,
 	Callback = function(New, Old)
 		WallHack.Visuals.ESPSettings.DisplayHealth = New
@@ -392,7 +392,7 @@ ESPSettings:AddToggle({
 }).Default = WallHack.Visuals.ESPSettings.DisplayHealth
 
 ESPSettings:AddToggle({
-	Name = "Display Name",
+	Name = "Nombre Jugador",
 	Value = WallHack.Visuals.ESPSettings.DisplayName,
 	Callback = function(New, Old)
 		WallHack.Visuals.ESPSettings.DisplayName = New
@@ -400,7 +400,7 @@ ESPSettings:AddToggle({
 }).Default = WallHack.Visuals.ESPSettings.DisplayName
 
 ESPSettings:AddSlider({
-	Name = "Offset",
+	Name = "Compensar",
 	Value = WallHack.Visuals.ESPSettings.Offset,
 	Callback = function(New, Old)
 		WallHack.Visuals.ESPSettings.Offset = New
@@ -410,7 +410,7 @@ ESPSettings:AddSlider({
 }).Default = WallHack.Visuals.ESPSettings.Offset
 
 ESPSettings:AddColorpicker({
-	Name = "Text Color",
+	Name = "Color de texto",
 	Value = WallHack.Visuals.ESPSettings.TextColor,
 	Callback = function(New, Old)
 		WallHack.Visuals.ESPSettings.TextColor = New
@@ -426,7 +426,7 @@ ESPSettings:AddColorpicker({
 }).Default = WallHack.Visuals.ESPSettings.OutlineColor
 
 ESPSettings:AddSlider({
-	Name = "Text Transparency",
+	Name = "Transparencia del texto",
 	Value = WallHack.Visuals.ESPSettings.TextTransparency,
 	Callback = function(New, Old)
 		WallHack.Visuals.ESPSettings.TextTransparency = New
@@ -437,7 +437,7 @@ ESPSettings:AddSlider({
 }).Default = WallHack.Visuals.ESPSettings.TextTransparency
 
 ESPSettings:AddSlider({
-	Name = "Text Size",
+	Name = "Texto tamaño",
 	Value = WallHack.Visuals.ESPSettings.TextSize,
 	Callback = function(New, Old)
 		WallHack.Visuals.ESPSettings.TextSize = New
@@ -447,7 +447,7 @@ ESPSettings:AddSlider({
 }).Default = WallHack.Visuals.ESPSettings.TextSize
 
 ESPSettings:AddDropdown({
-	Name = "Text Font",
+	Name = "Text Fuente",
 	Value = Fonts[WallHack.Visuals.ESPSettings.TextFont + 1],
 	Callback = function(New, Old)
 		WallHack.Visuals.ESPSettings.TextFont = Drawing.Fonts[New]
@@ -465,7 +465,7 @@ BoxesSettings:AddToggle({
 }).Default = WallHack.Visuals.BoxSettings.Enabled
 
 BoxesSettings:AddSlider({
-	Name = "Transparency",
+	Name = "Transparencia",
 	Value = WallHack.Visuals.BoxSettings.Transparency,
 	Callback = function(New, Old)
 		WallHack.Visuals.BoxSettings.Transparency = New
@@ -476,7 +476,7 @@ BoxesSettings:AddSlider({
 }).Default = WallHack.Visuals.BoxSettings.Transparency
 
 BoxesSettings:AddSlider({
-	Name = "Thickness",
+	Name = "Espesor",
 	Value = WallHack.Visuals.BoxSettings.Thickness,
 	Callback = function(New, Old)
 		WallHack.Visuals.BoxSettings.Thickness = New
@@ -522,7 +522,7 @@ BoxesSettings:AddToggle({
 }).Default = WallHack.Visuals.BoxSettings.Filled
 
 ChamsSettings:AddToggle({
-	Name = "Enabled",
+	Name = "Activada",
 	Value = WallHack.Visuals.ChamsSettings.Enabled,
 	Callback = function(New, Old)
 		WallHack.Visuals.ChamsSettings.Enabled = New
@@ -546,7 +546,7 @@ ChamsSettings:AddToggle({
 }).Default = WallHack.Visuals.ChamsSettings.EntireBody
 
 ChamsSettings:AddSlider({
-	Name = "Transparency",
+	Name = "Transparencia",
 	Value = WallHack.Visuals.ChamsSettings.Transparency,
 	Callback = function(New, Old)
 		WallHack.Visuals.ChamsSettings.Transparency = New
@@ -575,7 +575,7 @@ ChamsSettings:AddColorpicker({
 }).Default = WallHack.Visuals.ChamsSettings.Color
 
 TracersSettings:AddToggle({
-	Name = "Enabled",
+	Name = "Activada",
 	Value = WallHack.Visuals.TracersSettings.Enabled,
 	Callback = function(New, Old)
 		WallHack.Visuals.TracersSettings.Enabled = New
@@ -622,7 +622,7 @@ TracersSettings:AddDropdown({
 }).Default = Fonts[WallHack.Visuals.TracersSettings.Type + 1]
 
 HeadDotsSettings:AddToggle({
-	Name = "Enabled",
+	Name = "Activada",
 	Value = WallHack.Visuals.HeadDotSettings.Enabled,
 	Callback = function(New, Old)
 		WallHack.Visuals.HeadDotSettings.Enabled = New
@@ -638,7 +638,7 @@ HeadDotsSettings:AddToggle({
 }).Default = WallHack.Visuals.HeadDotSettings.Filled
 
 HeadDotsSettings:AddSlider({
-	Name = "Transparency",
+	Name = "Transparencia",
 	Value = WallHack.Visuals.HeadDotSettings.Transparency,
 	Callback = function(New, Old)
 		WallHack.Visuals.HeadDotSettings.Transparency = New
@@ -677,7 +677,7 @@ HeadDotsSettings:AddColorpicker({
 }).Default = WallHack.Visuals.HeadDotSettings.Color
 
 HealthBarSettings:AddToggle({
-	Name = "Enabled",
+	Name = "Activada",
 	Value = WallHack.Visuals.HealthBarSettings.Enabled,
 	Callback = function(New, Old)
 		WallHack.Visuals.HealthBarSettings.Enabled = New
@@ -685,7 +685,7 @@ HealthBarSettings:AddToggle({
 }).Default = WallHack.Visuals.HealthBarSettings.Enabled
 
 HealthBarSettings:AddDropdown({
-	Name = "Position",
+	Name = "Posición",
 	Value = WallHack.Visuals.HealthBarSettings.Type == 1 and "Top" or WallHack.Visuals.HealthBarSettings.Type == 2 and "Bottom" or WallHack.Visuals.HealthBarSettings.Type == 3 and "Left" or "Right",
 	Callback = function(New, Old)
 		WallHack.Visuals.HealthBarSettings.Type = New == "Top" and 1 or New == "Bottom" and 2 or New == "Left" and 3 or 4
@@ -695,7 +695,7 @@ HealthBarSettings:AddDropdown({
 }).Default = WallHack.Visuals.HealthBarSettings.Type == 1 and "Top" or WallHack.Visuals.HealthBarSettings.Type == 2 and "Bottom" or WallHack.Visuals.HealthBarSettings.Type == 3 and "Left" or "Right"
 
 HealthBarSettings:AddSlider({
-	Name = "Transparency",
+	Name = "Transparencia",
 	Value = WallHack.Visuals.HealthBarSettings.Transparency,
 	Callback = function(New, Old)
 		WallHack.Visuals.HealthBarSettings.Transparency = New
@@ -706,7 +706,7 @@ HealthBarSettings:AddSlider({
 }).Default = WallHack.Visuals.HealthBarSettings.Transparency
 
 HealthBarSettings:AddSlider({
-	Name = "Size",
+	Name = "Tamaño",
 	Value = WallHack.Visuals.HealthBarSettings.Size,
 	Callback = function(New, Old)
 		WallHack.Visuals.HealthBarSettings.Size = New
@@ -716,7 +716,7 @@ HealthBarSettings:AddSlider({
 }).Default = WallHack.Visuals.HealthBarSettings.Size
 
 HealthBarSettings:AddSlider({
-	Name = "Blue",
+	Name = "Azul",
 	Value = WallHack.Visuals.HealthBarSettings.Blue,
 	Callback = function(New, Old)
 		WallHack.Visuals.HealthBarSettings.Blue = New
@@ -746,7 +746,7 @@ HealthBarSettings:AddColorpicker({
 --// Crosshair Settings
 
 CrosshairSettings:AddToggle({
-	Name = "Mouse Cursor",
+	Name = "Cursor del ratón",
 	Value = UserInputService.MouseIconEnabled,
 	Callback = function(New, Old)
 		UserInputService.MouseIconEnabled = New
@@ -754,7 +754,7 @@ CrosshairSettings:AddToggle({
 }).Default = UserInputService.MouseIconEnabled
 
 CrosshairSettings:AddToggle({
-	Name = "Enabled",
+	Name = "Activada",
 	Value = WallHack.Crosshair.Settings.Enabled,
 	Callback = function(New, Old)
 		WallHack.Crosshair.Settings.Enabled = New
@@ -770,7 +770,7 @@ CrosshairSettings:AddColorpicker({
 }).Default = WallHack.Crosshair.Settings.Color
 
 CrosshairSettings:AddSlider({
-	Name = "Transparency",
+	Name = "Transparencia",
 	Value = WallHack.Crosshair.Settings.Transparency,
 	Callback = function(New, Old)
 		WallHack.Crosshair.Settings.Transparency = New
@@ -781,7 +781,7 @@ CrosshairSettings:AddSlider({
 }).Default = WallHack.Crosshair.Settings.Transparency
 
 CrosshairSettings:AddSlider({
-	Name = "Size",
+	Name = "Tamaño",
 	Value = WallHack.Crosshair.Settings.Size,
 	Callback = function(New, Old)
 		WallHack.Crosshair.Settings.Size = New
@@ -801,7 +801,7 @@ CrosshairSettings:AddSlider({
 }).Default = WallHack.Crosshair.Settings.Thickness
 
 CrosshairSettings:AddSlider({
-	Name = "Gap Size",
+	Name = "Tamaño del hueco",
 	Value = WallHack.Crosshair.Settings.GapSize,
 	Callback = function(New, Old)
 		WallHack.Crosshair.Settings.GapSize = New
@@ -821,7 +821,7 @@ CrosshairSettings:AddSlider({
 }).Default = WallHack.Crosshair.Settings.Rotation
 
 CrosshairSettings:AddDropdown({
-	Name = "Position",
+	Name = "Posición",
 	Value = WallHack.Crosshair.Settings.Type == 1 and "Mouse" or "Center",
 	Callback = function(New, Old)
 		WallHack.Crosshair.Settings.Type = New == "Mouse" and 1 or 2
@@ -878,7 +878,7 @@ CrosshairSettings_CenterDot:AddToggle({
 --// Functions / Functions
 
 FunctionsSection:AddButton({
-	Name = "Reset Settings",
+	Name = "Restablecer configuración",
 	Callback = function()
 		Aimbot.Functions:ResetSettings()
 		WallHack.Functions:ResetSettings()
@@ -887,7 +887,7 @@ FunctionsSection:AddButton({
 })
 
 FunctionsSection:AddButton({
-	Name = "Restart",
+	Name = "Reanudar",
 	Callback = function()
 		Aimbot.Functions:Restart()
 		WallHack.Functions:Restart()
@@ -895,13 +895,6 @@ FunctionsSection:AddButton({
 })
 
 FunctionsSection:AddButton({
-	Name = "Exit",
+	Name = "Salida",
 	Callback = Library.Unload,
-})
-
-FunctionsSection:AddButton({
-	Name = "Copy Script Page",
-	Callback = function()
-		setclipboard("https://github.com/Exunys/AirHub")
-	end
 })
