@@ -145,7 +145,7 @@ local FunctionsSection = FunctionsTab:CreateSection({
 --// Aimbot Values
 
 Values:AddToggle({
-	Name = "ON",
+	Name = "Activada",
 	Value = Aimbot.Settings.Enabled,
 	Callback = function(New, Old)
 		Aimbot.Settings.Enabled = New
