@@ -905,28 +905,3 @@ FunctionsSection:AddButton({
 		setclipboard("https://github.com/Exunys/AirHub")
 	end
 })
-
---// AirHub V2 Prompt
-
-do
-	local Aux = Instance.new("BindableFunction")
-    
-	Aux.OnInvoke = function(Answer)
-		if Answer == "No" then
-			return
-		end
-
-		Library.Unload()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub-V2/main/src/Main.lua"))()
-	end
-
-	game.StarterGui:SetCore("SendNotification", {
-		Title = "🎆  AirHub V2  🎆",
-		Text = "Would you like to use the new AirHub V2 script?",
-		Button1 = "Yes",
-		Button2 = "No",
-		Duration = 1 / 0,
-		Icon = "rbxassetid://6238537240",
-		Callback = Aux
-	})
-end
